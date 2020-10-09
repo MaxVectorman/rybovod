@@ -1,0 +1,86 @@
+git init  // создаем репозиторий
+
+git config --global user.name "maxinus"  // задать имя пользователя
+
+git config --global user.email vectorman777@gmail.com // указать электронную почту
+
+git config --list // команда проверки свойств git 
+
+.gitignore // файл создается в рабочей папке для конфигурации игнора файлов 
+
+git status // показывает текущий статус проекта 
+
+git status --untracked-files=normal
+
+git status --untracked-files=all
+
+_________________________________________________________________
+
+git add .
+
+git rm --cached index.php // исключить из буфера
+
+git commit -a -m"init"
+
+git commit -m"add files" // коммит в активную ветку
+
+git add "*.php" // индексировать файлы с разрешением php
+
+git checkout -- index.php // удалить последние неиндексированные данные
+
+git log // запросить  историю коммитов
+
+git log rpetty=format:"%h - %an, %ar : %s" // h - код изменения (сокращенно), an - автор, ar - время, когда было произведенно изменения, s - статус изменения
+
+git log --since=2.weeks // показать коммиты за последние две недели
+
+git log -p -2 // показывает последний коммит и какие изменения в нем проводились, цифра 2 означает, что нужно вывести два последних коммита 
+
+
+_________________________________________________________________
+
+git config --global core.editor "'C:\Program Files\Sublime Text 3\sublime_text.exe' -multiInst -notabbar -nosession -noPlugin"
+-----------------------------------------------------------------
+[core]
+	editor = 'C:\\Program Files\\Sublime Text 3\\sublime_text.exe' -multiInst -notabbar -nosession -noPlugin?
+_________________________________________________________________
+
+git checkout -b new_f // создать новую ветку и переключиться на нее
+
+git branch // просмотреть все существующие ветки
+
+git branch -v // получить более детальную информацию
+
+git branch new_f2 // создать новую ветку с именем new_f2 и остаться при этом на старой
+
+_________________________________________________________________
+
+git config --global merge.tool kdiff3 // включить kdiff3
+
+git merge master // мерджинг ветви master
+
+git mergetool // запустить унструмент мерджинга
+
+git config --global mergetool.kdiff3.cmd '"c:\\Program Files\\KDiff3\\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'
+-----------------------------------------------------------------
+урок по мерджингу
+
+https://www.youtube.com/watch?v=xAKnRuYobdc&list=PLoonZ8wII66iUm84o7nadL-oqINzBLk5g&index=10
+_________________________________________________________________
+
+Создаем репозиторий на GitHub
+
+git remote add origin https://github.com/MaxVectorman/git-project.git // команда для инициализации git проект в GitHub 
+
+git remote
+
+git remote -v
+
+git push -u origin master // пушим в наш удаленный репозиторий
+ 
+
+
+
+
+
+

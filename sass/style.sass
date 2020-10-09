@@ -1,0 +1,202 @@
+@import mixins
+@import media
+@import sprites
+@import normalize
+
+$font-family: Montserrat
+
+.wrapper
+	width: 1200px
+	margin: 0 auto
+
+
+
+.header
+	padding-top: 40px
+	background-image: url(../img/bg30.jpg)
+	background-size: cover
+	height: 250px
+
+.header-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.logo
+	height: 150px
+	weight: 150px
+
+.header-menu
+	display: flex
+	list-style: none
+	&__item
+		font-size: 18px
+		margin-right: 0px
+	&__link
+		padding-bottom: 5px
+	&__link:hover
+		border-bottom: 1px solid #000
+
+/* ======================================== */
+
+.main-menu
+	height: 51px
+	width: 900px
+	padding: 0 50px
+	border-radius: 10px
+	list-style: none
+	justify-content: space-between
+	align-items: center
+	display: flex
+	background-color: #fff
+	box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.2)
+	&__item
+		display: flex
+		align-items: center
+		&:hover .main-menu__link
+			color: #53c6ec
+			text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.7)
+	&__link
+		height: 65px
+		width: 100px
+		padding-top: 25px
+		text-align: center
+		line-height: 10px
+		color: #343e5c		
+		font-size: 15px
+		font-weight: 500
+		display: block
+		
+
+.dropdown:hover .dropdown-content
+	opacity: 1
+	left: -100px
+	visibility: visible
+
+.dropdown
+	position: relative
+	&-content
+		position: absolute
+		background-color: #f0f2f7
+		font-size: 15px
+		font-weight: 500
+		top: 90%
+		z-index: 99
+		left: -10000px
+		visibility: hidden
+		opacity: 0
+		border-radius: 0px 0px 10px 10px
+		/*transition: opacity 0.1s, margin-top 0.2s*/
+	&-menu
+		list-style: none
+		width: 296px
+		border-radius: 0px 0px 10px 10px
+		box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4)
+		&__item
+			display: flex
+			height: 61px
+			justify-content: center
+			align-items: center
+			&:hover
+				background-color: #53c6ec
+			&--big
+				display: flex
+				height: 75px
+				justify-content: center
+				align-items: center
+				&:hover
+					background-color: #53c6ec
+		&__link
+			width: 296px
+			height: 61px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #343e5c
+			font-size: 15px
+			font-weight: 500
+			line-height: 20px
+		&__link--big
+			width: 296px
+			height: 75px
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0 20px
+			text-align: center
+			color: #343e5c
+			font-size: 15px
+			font-weight: 500
+			line-height: 20px
+
+
+.dropdown-menu__item:last-child
+	border-radius: 0px 0px 10px 10px
+
+.dropdown-menu__item:hover .dropdown-menu__link
+	color: #fff
+
+.dropdown-menu__item--big:hover .dropdown-menu__link--big
+	color: #fff
+
+.dropdown-menu__item--big:last-child
+	border-radius: 0px 0px 10px 10px
+
+/* ======================================== */
+
+.title
+	color: #2b398d
+	font-size: 34px
+	margin-top: 50px
+	margin-bottom: 30px
+
+.text
+	/*color: #343e5c*/
+	font-size: 16px
+	margin-top: 20px
+	line-height: 25px
+	width: 900px
+	&-bold
+		font-size: 18px
+		font-weight: bold
+	&-mod
+		color: #53c6ec
+
+.list
+	margin-top: 20px
+	margin-left: 50px
+	&-order
+		margin-left: 100px
+	&-marker
+		color: #2b398d
+		font-size: 25px
+		font-weight: 500
+		line-height: 25px
+		width: 580px
+		margin-top: 10px
+	&-item
+		font-size: 18px
+		color: #333
+		margin-top: 15px
+
+.italic
+	font-size: 20px
+	font-style: italic
+	color: #2b398d
+	margin-top: 60px
+	&-bold
+		font-weight: bold
+
+.img
+	&-item
+		width: 450px
+		height: 300px
+		margin: 30px 0
+		margin-right: 20px
+
+.footer
+	display: block
+	height: 200px
+	border-top: 1px solid #fff
+	margin-top: 100px
+	background: #2b398d
